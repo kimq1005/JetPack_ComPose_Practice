@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">JETPACK_COMPOSE_PRACTICE</string>
+
+    <string name="bottomnavi_calender">캘린더</string>
+    <string name="bottomnavi_timeline">타임라인</string>
+    <string name="bottomnavi_analysis">분석보고서</string>
+    <string name="bottomnavi_setting">설정</string>
 </resources>

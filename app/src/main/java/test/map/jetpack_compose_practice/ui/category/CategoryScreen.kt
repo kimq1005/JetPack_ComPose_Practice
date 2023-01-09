@@ -185,9 +185,47 @@ fun dataset(viewModel: CategoryViewModel) {
 
 }
 
+@Composable
+fun TESTSCREEN_1(){
+    Scaffold() {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(text = "타임라인")
+        }
+    }
+}
 
+@Composable
+fun TESTSCREEN_2(){
+    Scaffold() {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(text = "분석정보")
+        }
+    }
+}
+
+
+@Composable
+fun TESTSCREEN_3(){
+    Scaffold() {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(text = "설정")
+        }
+    }
+}
 @Preview
 @Composable
 fun Preview() {
-    CategoryScreen()
+    TESTSCREEN_1()
 }
