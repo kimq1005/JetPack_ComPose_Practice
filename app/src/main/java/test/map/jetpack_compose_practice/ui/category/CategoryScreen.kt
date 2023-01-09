@@ -112,7 +112,7 @@ fun CategoryScreen() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
-            ) {
+            ) {//
                 items(viewModel.categoryModel) { categoryitem ->
                     Row {
                         CategoryItem(categoryModel = categoryitem)
@@ -122,10 +122,10 @@ fun CategoryScreen() {
 
 
             }
-            
+
             Spacer(modifier = Modifier.height(50.dp))
 
-//
+//sd
             Text(
                 text = "견생역전을 꿈꿔요!",
                 fontFamily = nanum_bold,
