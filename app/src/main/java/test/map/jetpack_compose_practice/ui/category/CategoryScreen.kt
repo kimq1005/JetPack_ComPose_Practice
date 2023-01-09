@@ -125,7 +125,7 @@ fun CategoryScreen() {
             
             Spacer(modifier = Modifier.height(50.dp))
 
-
+//
             Text(
                 text = "견생역전을 꿈꿔요!",
                 fontFamily = nanum_bold,
