@@ -1,5 +1,6 @@
 package test.map.jetpack_compose_practice
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -22,29 +23,28 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import test.map.jetpack_compose_practice.Utils.Companion.TAG
+import test.map.jetpack_compose_practice.ui.bottomnavi.NavigationGraph
 
 class MainActivity : ComponentActivity() {
+    @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val viewModel = viewModel<MainViewModel>()
             val navController = rememberNavController()
-            NavHost(navController = navController, startDestination = "home") {
-                composable(route = "home") {
-                    TestScreen(navController, viewModel)
-                }
-                composable(route = "result") {
-                    ResultScreen(navController, viewModel)
-                }
-            }
-        }
+           Scaffold(
+               topBar = { TopAppBar(title = { Text(text = "asdasd")}) },
+               bottomBar = { test.map.jetpack_compose_practice.ui.bottomnavi.BottomNavigation(
+               navController = navController)}
+           ) {
+               NavigationGraph(navController = navController)
+           }
+         }
     }
 }
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun TestScreen(
     navController: NavController,
@@ -106,6 +106,8 @@ fun TestScreen(
     }
 }
 
+
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun ResultScreen(navController: NavController, mainViewModel: MainViewModel) {
 
@@ -114,13 +116,18 @@ fun ResultScreen(navController: NavController, mainViewModel: MainViewModel) {
         navigationIcon = {
             Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "",
             Modifier.clickable { navController.popBackStack() })
-        })}) {
+        })}) { _ ->
         Column(Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center) {
-            Text(mainViewModel.name.value, fontSize = 16.sp, modifier = Modifier.background(Color.Blue).fillMaxWidth(), color = Color.White)
+            Text(mainViewModel.name.value, fontSize = 16.sp, modifier = Modifier
+                .background(Color.Blue)
+                .fillMaxWidth(), color = Color.White)
             Spacer(modifier = Modifier.height(10.dp))
-            Text(mainViewModel.password.toString(), fontSize = 14.sp, modifier = Modifier.background(Color.Red), color = Color.White)
+            Text(mainViewModel.password.toString(),
+                fontSize = 14.sp,
+                modifier = Modifier.background(Color.Red),
+                color = Color.White)
         }
     }
 
