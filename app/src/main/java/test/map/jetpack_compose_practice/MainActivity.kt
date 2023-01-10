@@ -21,26 +21,31 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import test.map.jetpack_compose_practice.Utils.Companion.TAG
 import test.map.jetpack_compose_practice.ui.bottomnavi.NavigationGraph
+import test.map.jetpack_compose_practice.ui.navermap.NaverMapScreen
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val navController = rememberNavController()
-           Scaffold(
-               topBar = { TopAppBar(title = { Text(text = "asdasd")}) },
-               bottomBar = { test.map.jetpack_compose_practice.ui.bottomnavi.BottomNavigation(
-               navController = navController)}
-           ) {
-               NavigationGraph(navController = navController)
-           }
-         }
+
+//            val navController = rememberNavController()
+//
+//            Scaffold(
+//                topBar = { TopAppBar(title = { Text(text = "asdasd") }) },
+//                bottomBar = {
+//                    test.map.jetpack_compose_practice.ui.bottomnavi.BottomNavigation(
+//                        navController = navController)
+//                }
+//            ) {
+//                NavigationGraph(navController = navController)
+//            }
+            NaverMapScreen()
+        }
     }
 }
 

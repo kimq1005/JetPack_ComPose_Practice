@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JETPACK_COMPOSE_PRACTICE"
-        tools:targetApi="31">
+        tools:targetApi="33">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -26,8 +26,8 @@
         </activity>
 
         <meta-data
-            android:name="com.naver.maps.map.9ix7hj50f3"
-            android:value="dnWUFbromn4OQxXJzx8isIOzg3wcAMfDYjLHoG7a" />
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="9ix7hj50f3" />
 
     </application>
 
