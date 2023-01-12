@@ -25,6 +25,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import test.map.jetpack_compose_practice.Utils.Companion.TAG
 import test.map.jetpack_compose_practice.ui.bottomnavi.NavigationGraph
+import test.map.jetpack_compose_practice.ui.kakao.KaKaoLoginScreen
 import test.map.jetpack_compose_practice.ui.navermap.NaverMapScreen
 
 class MainActivity : ComponentActivity() {
@@ -44,7 +45,9 @@ class MainActivity : ComponentActivity() {
 //            ) {
 //                NavigationGraph(navController = navController)
 //            }
-            NaverMapScreen()
+//            NaverMapScreen()
+
+            KaKaoLoginScreen()
         }
     }
 }
