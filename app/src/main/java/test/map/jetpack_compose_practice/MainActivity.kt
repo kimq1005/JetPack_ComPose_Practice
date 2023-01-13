@@ -21,18 +21,24 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import test.map.jetpack_compose_practice.Utils.Companion.TAG
-import test.map.jetpack_compose_practice.ui.bottomnavi.NavigationGraph
-import test.map.jetpack_compose_practice.ui.kakao.KaKaoLoginScreen
-import test.map.jetpack_compose_practice.ui.navermap.NaverMapScreen
+import test.map.jetpack_compose_practice.ui.lostark.*
 
 class MainActivity : ComponentActivity() {
-    @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+
+            val navController = rememberNavController()
+
+
+//            val car: Car by inject()
+//            car.startCar()
 
 //            val navController = rememberNavController()
 //
@@ -46,9 +52,9 @@ class MainActivity : ComponentActivity() {
 //                NavigationGraph(navController = navController)
 //            }
 //            NaverMapScreen()
-
-            KaKaoLoginScreen()
-        }
+//
+//            KaKaoLoginScreen()
+    }
     }
 }
 
